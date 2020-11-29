@@ -4,14 +4,7 @@ import java.util.List;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {         
-            String words[]= word.split("\\s");  
-            String capitalizeWord="";  
-            for(String w:words){  
-                String first=w.substring(0,1);  
-                String afterfirst=w.substring(1);  
-                capitalizeWord += first.toUpperCase()+afterfirst+" ";  
-            }  
-            return capitalizeWord.trim();  
+        return Character.toUpperCase(word.charAt(0))+word.substring(1);
     }
 
     public String generateInitials(String firstName, String lastName) {
@@ -37,6 +30,14 @@ public class Exercise001 {
 
     public int countLinuxUsers(List<User> users) {
         // Add your code here
-        return 0;
+        int count =0;
+        for (int i=0; i<users.size(); i++) {
+            User systemName = users.get(i) ;
+            if(systemName.getType().equals("Linux")) {
+                count++;
+            }
+            
+            }  return count;
+        }
+        
     }
-}
