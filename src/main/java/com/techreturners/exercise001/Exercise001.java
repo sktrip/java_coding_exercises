@@ -25,9 +25,8 @@ public class Exercise001 {
 
     public int countLinuxUsers(List<User> users) {
         int count = 0;
-        for (int i = 0; i < users.size(); i++) {
-            User systemName = users.get(i);
-            if (systemName.getType().equals("Linux")) {
+        for (User user : users) {
+            if (user.getType().equals("Linux")) {
                 count++;
             }
         }
