@@ -23,8 +23,10 @@ public class Exercise002Test {
 
         Person p1 = new Person("Peter", "Smith", "Manchester", 17);
         Person p2 = new Person("Francis", "Farmer", "Leeds", 18);
+        Person p3 = new Person("Luke", "John","London", 43);
 
         assertEquals(false, ex002.canWatchFilm(p1, 18 ));
         assertEquals(true, ex002.canWatchFilm( p2, 18 ));
+        assertEquals(true, ex002.canWatchFilm( p3, 15 ));
     }
 }
